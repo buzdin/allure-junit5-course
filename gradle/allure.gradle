@@ -1,0 +1,14 @@
+apply plugin: 'io.qameta.allure'
+
+allure {
+    version = '2.3.4'
+    autoconfigure = true
+    aspectjweaver = true
+    aspectjVersion = '1.8.11'
+    allureJavaVersion = allureVersion
+    clean = true
+
+    useCucumberJVM {
+        version = allureVersion
+    }
+}

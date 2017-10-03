@@ -1,0 +1,32 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "io.qameta.allure:allure-gradle:2.4"
+        classpath 'org.junit.platform:junit-platform-gradle-plugin:1.0.0'
+    }
+}
+
+apply from: "${rootDir}/gradle/dependencies.gradle"
+
+apply plugin: "idea"
+
+idea {
+    project {
+        languageLevel = "1.8"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+
+    task allDeps(type: DependencyReportTask) {}
+}
+
+defaultTasks "clean", "build"
+
+apply from: "${rootDir}/gradle/wrapper.gradle"
+apply from: "${rootDir}/gradle/allure-aggregate.gradle"

@@ -1,0 +1,26 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+}
+
+apply plugin: 'base'
+
+task cleanAggregatedAllureReport() {
+    def aggregatedAllureResults = "${rootProject.buildDir}/aggregated-allure-report"
+    delete aggregatedAllureResults
+}
+
+task aggregateAllureResults {
+    def aggregatedAllureResults = "${rootProject.buildDir}/aggregated-allure-results"
+    delete aggregatedAllureResults
+
+    subprojects.each {
+        def allureResult = "${it.buildDir}/allure-results"
+        copy {
+            from allureResult
+            into aggregatedAllureResults
+        }
+    }
+}
+
