@@ -1,0 +1,28 @@
+configurations {
+    agent
+}
+
+dependencies {
+    agent "org.aspectj:aspectjweaver:${aspectjVersion}"
+
+    testCompile libs.junit5
+    testRuntime libs.junit5engine
+    testCompile libs.allure
+}
+
+junitPlatform {
+    filters {
+        engines {
+            include 'junit-jupiter'
+        }
+    }
+    enableStandardTestTask true
+}
+
+tasks.withType(JavaExec) {
+    if (it.name == 'junitPlatformTest') {
+        doFirst {
+            jvmArgs "-javaagent:${configurations.agent.singleFile}"
+        }
+    }
+}

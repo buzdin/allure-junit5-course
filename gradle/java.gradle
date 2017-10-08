@@ -17,31 +17,6 @@ sourceSets {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-ext {
-    allureJUnit5Version = '2.0-BETA18'
-    aspectjVersion = '1.8.10'
-}
-
 task dist {
     dependsOn 'build'
 }
-
-dependencies {
-    testCompile("io.qameta.allure:allure-junit5:${allureJUnit5Version}")
-    testCompile libs.junit5
-    testRuntime libs.junit5engine
-}
-
-junitPlatform {
-    filters {
-        engines {
-            include 'junit-jupiter'
-        }
-    }
-}
-
-afterEvaluate {
-    def junitPlatformTestTask = tasks.getByName('junitPlatformTest')
-    junitPlatformTestTask.systemProperty 'allure.results.directory', 'build/allure-results'
-}
-

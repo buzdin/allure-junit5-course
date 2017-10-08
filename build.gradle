@@ -26,7 +26,7 @@ allprojects {
     task allDeps(type: DependencyReportTask) {}
 }
 
-defaultTasks "clean", "build"
+defaultTasks "clean", "build", "allureReport"
 
 apply from: "${rootDir}/gradle/wrapper.gradle"
 apply from: "${rootDir}/gradle/allure-aggregate.gradle"

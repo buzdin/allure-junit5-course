@@ -4,11 +4,12 @@ allure {
     version = '2.3.4'
     autoconfigure = true
     aspectjweaver = true
-    aspectjVersion = '1.8.11'
+    aspectjVersion = aspectjVersion
     allureJavaVersion = allureVersion
+    resultsDir = file("${projectDir}/allure-results")
     clean = true
+}
 
-    useCucumberJVM {
-        version = allureVersion
-    }
+clean.doFirst {
+    delete "${projectDir}/allure-results/"
 }
