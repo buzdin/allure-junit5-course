@@ -21,20 +21,27 @@ This command will do the following:
 * executes tests
 * generates test reports
 
+### About System under Test (SUT) ###
+
+You are provided with a simple system under test to write your exercises.
+
 ### Lab 1 - JUnit 5 Basics ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* Create your first test case
+* User before/after methods
+* Change display name of a test case
+* Use JUnit 5 assertions
+* Add logging statements
+* Add logback.xml from examples to enable logging
 
 ### Lab 2 - Structuring Junit 5 Test Cases ###
 
-* Writing tests
-* Code review
-* Other guidelines
+* Create few test cases
+* Place two types of tags on a test case
+* Create a custom tag and place it
+* Create a Test Plan to execute only one tag
+* Create nested test case structure
+* Disable a test case
 
 ### Lab 3 - Data-Driven Testing in JUnit 5 ###
 
