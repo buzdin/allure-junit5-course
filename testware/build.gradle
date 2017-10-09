@@ -1,7 +1,3 @@
 apply from: "${rootDir}/gradle/java.gradle"
 apply from: "${rootDir}/gradle/junit5.gradle"
 apply from: "${rootDir}/gradle/allure.gradle"
-
-dependencies {
-    compile libs.logging
-}

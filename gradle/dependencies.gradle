@@ -1,6 +1,6 @@
 ext {
 
-    allureVersion = '2.0-BETA18'
+    allureVersion = '2.0-BETA19'
     aspectjVersion = '1.8.10'
 
     junitPlatformVersion = '1.0.0'
@@ -20,6 +20,7 @@ ext {
             ],
             allure        : [
                     "io.qameta.allure:allure-java-commons:${allureVersion}",
+                    "io.qameta.allure:allure-junit-platform:${allureVersion}",
                     "io.qameta.allure:allure-junit5:${allureVersion}"
             ],
             logging           : [
