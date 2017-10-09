@@ -15,8 +15,7 @@ ext {
                     "org.assertj:assertj-core:3.8.0"
             ],
             junit5engine      : [
-                    "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}",
-                    "org.junit.vintage:junit-vintage-engine:${junitVintageVersion}"
+                    "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}"
             ],
             allure        : [
                     "io.qameta.allure:allure-java-commons:${allureVersion}",

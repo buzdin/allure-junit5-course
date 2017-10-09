@@ -1,3 +1,4 @@
 rootProject.name = 'junit5-allure2'
 
+include 'sut'
 include 'testware'

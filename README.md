@@ -1,14 +1,27 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This is a guideline for JUnit 5 & Allure 2 Workshop  
 
-### What is this repository for? ###
+### How to run tests ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+In order to run tests simply execute
 
-### How do I get set up? ###
+Linux or MacOS
+
+```./gradlew```
+
+Windows
+
+```gradlew.bat```
+
+This command will do the following:
+* download necessary Gradle version
+* retrieves all project dependencies
+* compiles the source code
+* executes tests
+* generates test reports
+
+### Lab 1 - JUnit 5 Basics ###
 
 * Summary of set up
 * Configuration
@@ -17,13 +30,20 @@ This README would normally document whatever steps are necessary to get your app
 * How to run tests
 * Deployment instructions
 
-### Contribution guidelines ###
+### Lab 2 - Structuring Junit 5 Test Cases ###
 
 * Writing tests
 * Code review
 * Other guidelines
 
-### How to produce Allure report ###
+### Lab 3 - Data-Driven Testing in JUnit 5 ###
 
-```./gradlew test```
-```./gradlew ```
+*
+*
+*
+
+### Lab 4 – Allure Test Reports ###
+
+*
+*
+*

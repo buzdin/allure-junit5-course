@@ -38,7 +38,7 @@ public class BasicTest {
     }
 
     @Test
-    @DisplayName("Hello")
+    @DisplayName("User Friendly Name")
     public void test() {
         logger.info("Hello");
     }
@@ -51,7 +51,7 @@ public class BasicTest {
     }
 
     @Test
-    @Disabled
+    @Disabled("it was failing")
     public void ignored() {
         logger.info("ignored");
     }

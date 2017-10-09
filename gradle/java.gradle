@@ -18,3 +18,8 @@ targetCompatibility = 1.8
 task dist {
     dependsOn 'build'
 }
+
+javadoc {
+    classpath += sourceSets.test.compileClasspath
+    source += sourceSets.test.allJava
+}
