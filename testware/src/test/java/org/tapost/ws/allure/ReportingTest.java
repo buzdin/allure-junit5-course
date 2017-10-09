@@ -12,14 +12,11 @@ import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 import io.qameta.allure.TmsLink;
-import io.qameta.allure.junit5.AllureJunit5AnnotationProcessor;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestReporter;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@ExtendWith(AllureJunit5AnnotationProcessor.class)
 public class ReportingTest {
 
     private static final Logger logger = LoggerFactory.getLogger(ReportingTest.class);
