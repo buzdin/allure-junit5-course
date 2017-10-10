@@ -3,5 +3,5 @@ apply from: "${rootDir}/gradle/junit5.gradle"
 apply from: "${rootDir}/gradle/allure.gradle"
 
 dependencies {
-    project(":sut")
+    testCompile project(":sut")
 }

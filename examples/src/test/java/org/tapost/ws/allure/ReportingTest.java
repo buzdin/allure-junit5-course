@@ -75,4 +75,25 @@ public class ReportingTest {
         return "{\"response\" : \"ok\"}".getBytes();
     }
 
+    @Test
+    public void nestedSteps() {
+        addToCart("raspberry-pi");
+    }
+
+    @Step
+    public void addToCart(String itemName) {
+        Long id = findItem(itemName);
+        purchase(id);
+    }
+
+    @Step
+    public Long findItem(String itemName) {
+        return 42L;
+    }
+
+    @Step
+    public void purchase(Long id) {
+    }
+
+
 }

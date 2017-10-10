@@ -2,28 +2,41 @@
 
 This is a guideline for JUnit 5 & Allure 2 Workshop  
 
+### Repository contents ###
+
+There are following top level directories in the repository:
+
+* "examples" - code examples to copy-paste from if you are stuck
+* "gradle" - build scripts, do not modify!
+* "sut" - system under test, sample system to play with
+* "testware" - this is where you could put your new test cases
+
 ### How to run tests ###
 
-In order to run tests simply execute
+In order to run tests simply execute:
 
 Linux or MacOS
 
-```./gradlew```
+```./gradlew testware:test```
 
 Windows
 
-```gradlew.bat```
+```gradlew.bat  testware:test```
 
 This command will do the following:
+
 * download necessary Gradle version
 * retrieves all project dependencies
 * compiles the source code
 * executes tests
 * generates test reports
 
+After this command succeeds you are all set for performing exercises.
+
 ### About System under Test (SUT) ###
 
 You are provided with a simple system under test to write your exercises.
+SUT represents a typical Internet Shop.
 
 ### Lab 1 - JUnit 5 Basics ###
 

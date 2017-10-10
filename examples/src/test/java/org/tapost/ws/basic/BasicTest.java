@@ -48,22 +48,22 @@ public class BasicTest {
     @Test
     public void assertions() {
         assertAll("person",
-                () -> assertEquals("John", ""),
-                () -> assertEquals("Doe", "")
+                () -> assertEquals("John", "John"),
+                () -> assertEquals("Doe", "Doe")
         );
     }
 
     @Test
     public void throwsError() {
         assertThrows(IllegalStateException.class, () -> {
-            throw new Exception();
+            throw new IllegalStateException();
         });
     }
 
     @Test
     public void waitsForTimeout() {
         assertTimeout(Duration.ofSeconds(1), () -> {
-            Thread.sleep(1001);
+            Thread.sleep(100);
         });
     }
 
