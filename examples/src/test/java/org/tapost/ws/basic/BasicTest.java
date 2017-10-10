@@ -74,4 +74,9 @@ public class BasicTest {
         });
     }
 
+    @Test
+    public void lamdaAssertion() {
+        assertTrue(() -> true, "This it not true");
+    }
+
 }

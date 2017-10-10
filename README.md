@@ -38,47 +38,73 @@ After this command succeeds you are all set for performing exercises.
 You are provided with a simple system under test to write your exercises.
 SUT represents a typical Internet Shop.
 
-There are following users registered
-admin admin
-user1 pwd
-user2 pwd
+There are following users and passwords registered:
+admin/admin
+user1/pwd
+user2/pwd
+
+Main class for Internet Shop implementation is 
+
+```org.tapost.ws.sut.InternetShop```
+
+It has a lot of functionality to test. All of the methods are documented.
+The task would be to write a test suite for this SUT quality assurance. 
+
+```
+login();
+logout();
+listItems();
+viewItem();
+searchItems();
+addToCart();
+viewShoppingCart();
+checkout();
+balance();
+topUpBalance();
+```
 
 ### Lab 1 - JUnit 5 Basics ###
 
-* Create your first test case
-* User before/after methods
-* Change display name of a test case
-* Use JUnit 5 assertions
-* Add logging statements
-* Add logback.xml from examples to enable logging
+* Go to testware/src/test/java directory
+* Open org.tapost.ws.lab1.BasicTests class
+* Take a look at the existing Internet Shop test case
+* Start creating your own test cases for Internet Shop
+* Use @Before and @After methods for test setup and teardown
+* Change display name of test cases
+* Use JUnit 5 style assertions where necessary
+* Add Slf4j API and logging statements where needed
+* Execute tests form IDE and observe the results
 
 ### Lab 2 - Structuring Junit 5 Test Cases ###
 
-* Create few test cases
-* Place two types of tags on a test case
-* Create a custom tag and place it
+* Go to testware/src/test/java directory
+* Add some more Internet Shop test cases
+* Extract some of the test cases to a separate class
+* Place two different types of tags on a test case
+* Create a custom tag annotation and place it
 * Create a Test Plan to execute only one tag
 * Create a Test Plan, which includes only one class
-* Create nested test case structure with Setup/Teardown methods
-* Disable a test case
-* Run everything and ensure all is working
+* Create nested test case structure with nested Setup/Teardown methods
+* Try disabling a test case
+* Run everything and ensure all test cases are working
 
 ### Lab 3 - Data-Driven Testing in JUnit 5 ###
 
-* Create a parametrized test
-* Use ValueSource annotation
-* Use CsvSource annotation and create a CSV file with test inputs
-* Use MethodSource annotation
-* Try RepeatedTest annotation
+* Go to testware/src/test/java directory
+* Rework some of the tests to become parametrized tests
+* Use parametrized DisplayName annotation value
+* Use ValueSource annotation to supply hardcoded test inputs
+* Use CsvSource annotation and create a CSV data file with test inputs
+* Use MethodSource annotation and supply test inputs as a Java 8 Stream
+* Try RepeatedTest annotation on a test case
+* Run everything and ensure tests are working
 
 ### Lab 4 – Allure Test Reports ###
 
 * Put all basic annotations on existing test cases
-* Refactor test cases to structured test steps
-* Add attachment
-* Generate Allure report
-* Add JavaDoc comments and generate documentation
-
-### TODO ###
-
-* check that default JUnit 5 report is generated before going to Allure
+* Refactor some of the test cases to invoke separate methods as test steps
+* Test steps should be parametrized
+* Add Allure attachment to test case execution (csv or json)
+* Generate Allure report and take a look at it
+* Locate the report and take a look
+* Run everything and ensure tests are working

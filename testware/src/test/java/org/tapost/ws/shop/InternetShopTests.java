@@ -1,4 +1,4 @@
-package org.tapost.ws.lab1;
+package org.tapost.ws.shop;
 
 import org.junit.jupiter.api.Test;
 import org.tapost.ws.sut.Account;
@@ -9,7 +9,7 @@ import org.tapost.ws.sut.ShoppingCart;
 import java.math.BigDecimal;
 import java.util.List;
 
-public class BasicTests {
+public class InternetShopTests {
 
     @Test
     public void test() {
