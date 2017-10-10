@@ -31,21 +31,14 @@ public class DataDrivenTest {
     }
 
     @ParameterizedTest
-    @CsvFileSource(resources = "/data/param1.csv")
+    @CsvFileSource(resources = "/data/users.csv")
     public void withCsvSource(String user, String password, Integer id) {
         logger.info("{}:{}:{}", user, password, id);
     }
 
     @ParameterizedTest
-    @CsvFileSource(resources = {"/data/param1.csv", "/data/param2.csv"})
-    public void withTwoCsvFiles() {
-
-    }
-
-    @ParameterizedTest
     @MethodSource("customData")
     public void testWithMethodSource() {
-
     }
 
     static Stream<Arguments> customData() {

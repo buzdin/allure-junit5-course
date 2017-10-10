@@ -2,6 +2,7 @@ package org.tapost.ws.basic;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -10,7 +11,9 @@ import org.junit.jupiter.api.TestInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import java.time.Duration;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class BasicTest {
 
@@ -43,9 +46,31 @@ public class BasicTest {
     }
 
     @Test
+    public void assertions() {
+        assertAll("person",
+                () -> assertEquals("John", ""),
+                () -> assertEquals("Doe", "")
+        );
+    }
+
+    @Test
     public void throwsError() {
         assertThrows(IllegalStateException.class, () -> {
-            throw new IllegalStateException();
+            throw new Exception();
+        });
+    }
+
+    @Test
+    public void waitsForTimeout() {
+        assertTimeout(Duration.ofSeconds(1), () -> {
+            Thread.sleep(1001);
+        });
+    }
+
+    @Test
+    public void assumptions() {
+        Assumptions.assumingThat(false, () -> {
+            assertTrue(false);
         });
     }
 

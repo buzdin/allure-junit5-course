@@ -40,8 +40,10 @@ You are provided with a simple system under test to write your exercises.
 * Place two types of tags on a test case
 * Create a custom tag and place it
 * Create a Test Plan to execute only one tag
-* Create nested test case structure
+* Create a Test Plan, which includes only one class
+* Create nested test case structure with Setup/Teardown methods
 * Disable a test case
+* Run everything and ensure all is working
 
 ### Lab 3 - Data-Driven Testing in JUnit 5 ###
 
@@ -51,6 +53,12 @@ You are provided with a simple system under test to write your exercises.
 
 ### Lab 4 – Allure Test Reports ###
 
-*
-*
-*
+* Put all basic annotations on existing test cases
+* Refactor test cases to structured test steps
+* Add attachment
+* Generate Allure report
+* Add JavaDoc comments and generate documentation
+
+### TODO ###
+
+* check that default JUnit 5 report is generated before going to Allure
