@@ -26,7 +26,7 @@ public class Database {
                         "Jane",
                         "Smith",
                         "ADMIN",
-                        new BigDecimal(100.0))
+                        new BigDecimal(0.0))
         );
         accounts.put("user2",
                 new Account(
@@ -35,7 +35,7 @@ public class Database {
                         "Jack",
                         "Black",
                         "ADMIN",
-                        new BigDecimal(200.0))
+                        new BigDecimal(0.0))
         );
 
         items.put(1, new Item(1, "Ice Cream", "Tasty Ice Cream", new BigDecimal(10.0)));

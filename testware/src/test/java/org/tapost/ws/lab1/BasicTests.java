@@ -6,6 +6,7 @@ import org.tapost.ws.sut.InternetShop;
 import org.tapost.ws.sut.Item;
 import org.tapost.ws.sut.ShoppingCart;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 public class BasicTests {
@@ -20,7 +21,12 @@ public class BasicTests {
         Account account = InternetShop.login("admin", "admin");
         System.out.println(account);
 
-        InternetShop.addToCart(1, 10);
+        InternetShop.topUpBalance(new BigDecimal(1.0));
+
+        System.out.println(InternetShop.balance());
+
+        List<Item> found = InternetShop.searchItems("Ice");
+        InternetShop.addToCart(found.iterator().next().getId(), 10);
         ShoppingCart shoppingCart = InternetShop.viewShoppingCart();
         System.out.println(shoppingCart);
 
@@ -28,6 +34,8 @@ public class BasicTests {
         System.out.println(status);
 
         System.out.println(account);
+
+        System.out.println(InternetShop.balance());
 
         InternetShop.logout();
     }

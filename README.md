@@ -38,6 +38,11 @@ After this command succeeds you are all set for performing exercises.
 You are provided with a simple system under test to write your exercises.
 SUT represents a typical Internet Shop.
 
+There are following users registered
+admin admin
+user1 pwd
+user2 pwd
+
 ### Lab 1 - JUnit 5 Basics ###
 
 * Create your first test case
@@ -60,9 +65,11 @@ SUT represents a typical Internet Shop.
 
 ### Lab 3 - Data-Driven Testing in JUnit 5 ###
 
-*
-*
-*
+* Create a parametrized test
+* Use ValueSource annotation
+* Use CsvSource annotation and create a CSV file with test inputs
+* Use MethodSource annotation
+* Try RepeatedTest annotation
 
 ### Lab 4 – Allure Test Reports ###
 
